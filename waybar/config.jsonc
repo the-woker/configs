@@ -34,14 +34,15 @@
     },
 
     "mpris": {
-        "format": "{player_icon} {dynamic}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "format": "{player_icon} {artist} - {album} - {title}",
+        "format-paused": "{status_icon} <i>{artist} - {album} - {title}</i>",
         "max-length": 40,
         "player-icons": {
             "default": "▶ ",
             "spotify": " ",
             "firefox": " "
         },
+        "title-len": 0,
         "status-icons": {
             "paused": "⏸ "
         }
