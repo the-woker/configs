@@ -70,7 +70,7 @@
 
     "custom/reload": {
         "format": "↻",
-        "on-click": "pkill waybar && waybar &"
+        "on-click": "reboot"
     },
 
     "custom/power": {
