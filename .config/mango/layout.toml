@@ -96,10 +96,9 @@ layer_name = "wofi"
 
 # monitor rule
 [[rule.monitor_rule]]
-name = "HDMI-A-1"
+name = "eDP-1"
 width = 1920
 height = 1080
-refresh = 120
+refresh = 60 
 x = 0
 y = 0
-# monitor_rule=name:^HDMI-A-1$,width:1920,height:1080,refresh:120,x:0,y:0

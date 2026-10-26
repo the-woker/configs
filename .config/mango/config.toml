@@ -1,0 +1,4 @@
+[global]
+source = ["./theme.toml", "./bind.toml", "./layout.toml"]
+exec = ["pkill neko-mangowm;neko-mangowm eDP-1", ]
+exec_once = ["awww-daemon", "awww img ~/.config/mango/wallp/musashi.png", "waybar", "mpris-proxy"]
