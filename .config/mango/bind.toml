@@ -2,7 +2,7 @@
 "SUPER+Return" = "spawn,ghostty"
 "SUPER+Space" = "spawn_shell, pkill wofi || wofi"
 "SUPER+r" = "reload_config"
-"SUPER+b" = "spawn,zen"
+"SUPER+b" = "spawn,zen-browser"
 "SUPER+e" = "spawn,ghostty -e zsh -c \"yazi; exec $SHELL\""
 "SUPER+t" = "spawn,ghostty -e zsh -c \"nvim; exec $SHELL\""
 
