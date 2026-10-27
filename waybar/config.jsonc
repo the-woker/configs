@@ -15,7 +15,6 @@
     "modules-right": [
         "clock", 
         "wireplumber", 
-        "custom/layout", 
         "cpu", 
         "memory",
         "custom/reload", 
@@ -35,6 +34,7 @@
 
     "mpris": {
         "format": "{player_icon} {title} - {artist} - {album}",
+        "dynamic-order": ["title", "artist", "album", "position"],
         "format-paused": "{status_icon} <i>{title} - {artist} - {album}</i>",
         "max-length": 40,
         "player-icons": {
