@@ -58,10 +58,10 @@
 "none+XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_SINK@ 2%+"
 "none+XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_SINK@ 2%-"
 "none+XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_SINK@ toggle"
-"none+XF86AudioPlay" = "spawn,playerctl play-pause"
+"none+F9" = "spawn,playerctl previous"
+"none+F10" = "spawn,playerctl play-pause"
+"none+F11" = "spawn,playerctl next"
 "none+XF86AudioStop" = "spawn,playerctl stop"
-"none+XF86AudioNext" = "spawn,playerctl next"
-"none+XF86AudioPrev" = "spawn,playerctl previous"
 
 "ALT+h" = "movewin,-50+0"
 "ALT+j" = "movewin,+0,+50"
