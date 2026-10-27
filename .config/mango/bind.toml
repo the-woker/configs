@@ -53,6 +53,8 @@
 "SUPER+SHIFT+8" = "tag,8,0"
 "SUPER+SHIFT+9" = "tag,9,0"
 
+"none+XF86MonBrightnessUp" = "spawn,brightnessctl s 2%+"
+"none+XF86MonBrightnessDown" = "spawn,brightnessctl s 2%-"
 "none+XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_SINK@ 2%+"
 "none+XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_SINK@ 2%-"
 "none+XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_SINK@ toggle"
