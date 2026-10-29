@@ -84,6 +84,12 @@ layout_name = "left_tile"
 id = 9
 layout_name = "left_tile"
 
+[[rule.window_rule]]
+is_floating = 1
+width = 800
+height = 800 
+app_id = "waypaper"
+
 
 
 # layer rule
