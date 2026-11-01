@@ -1,0 +1,23 @@
+window {
+    background-color: #191724; 
+    color: #e0def4; 
+}
+
+flowboxchild {
+    border-radius: 8px;
+    padding: 4px;
+}
+
+flowboxchild:selected {
+    background-color: #ebbcba; 
+}
+
+button, combobox {
+    background-color: #26233a;
+    border: 1px solid #403d52;
+    color: #e0def4;
+}
+
+button:hover {
+    background-color: #31748f;
+}
