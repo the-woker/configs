@@ -52,10 +52,6 @@ xkb_rules_layout=us
 
 mouse_natural_scrolling=0
 
-# Appearance
-
-# layout support:
-# tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
 [[rule.tag_rule]]
 id = 1
 layout_name = "left_tile"
@@ -85,8 +81,6 @@ id = 9
 layout_name = "left_tile"
 
 
-
-# layer rule
 [[rule.layer_rule]]
 animation_type_open = "zoom"
 layer_name = "wofi"
@@ -94,7 +88,10 @@ layer_name = "wofi"
 animation_type_close = "zoom"
 layer_name = "wofi"
 
-# monitor rule
+[[window_rule]]
+app_id = "waypaper"
+is_floating = 1
+
 [[rule.monitor_rule]]
 name = "HDMI-A-1"
 width = 1920
@@ -102,4 +99,3 @@ height = 1080
 refresh = 120
 x = 0
 y = 0
-# monitor_rule=name:^HDMI-A-1$,width:1920,height:1080,refresh:120,x:0,y:0
