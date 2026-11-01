@@ -89,7 +89,7 @@ animation_type_close = "zoom"
 layer_name = "wofi"
 
 [[window_rule]]
-app_id = "waypaper"
+title = "waypaper"
 is_floating = 1
 
 [[rule.monitor_rule]]
