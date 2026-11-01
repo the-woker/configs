@@ -6,6 +6,8 @@
 "SUPER+e" = "spawn,ghostty -e zsh -c \"yazi; exec $SHELL\""
 "SUPER+t" = "spawn,ghostty -e zsh -c \"nvim; exec $SHELL\""
 
+
+"SUPER+w" = "spawn_shell,waypaper --zen-mode"
 "SUPER+ALT+Tab" = "focusstack,next"
 "SUPER+SHIFT+s" = "spawn, grim -g \"$(slurp)\" \"/home/$USER/Screenshots/$(date \"+%Y-%m-%d %H:%M:%S\").png\""
 "SUPER+c" = "spawn, ghostty -e zsh -c \"cd ~/nixdots && nvim .; exec $SHELL\""
