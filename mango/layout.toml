@@ -92,6 +92,10 @@ layer_name = "wofi"
 title = "waypaper"
 is_floating = 1
 
+[[window_rule]]
+app_id = "waypaper"
+is_floating = 1
+
 [[rule.monitor_rule]]
 name = "HDMI-A-1"
 width = 1920
