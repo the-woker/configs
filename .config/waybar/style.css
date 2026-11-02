@@ -58,6 +58,7 @@ window#waybar {
 
 #clock,
 #wireplumber,
+#battery,
 #cpu,
 #memory,
 #custom-reload,
