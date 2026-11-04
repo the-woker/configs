@@ -32,7 +32,6 @@
         }
     },
 
-
     "mpris": {
         "format": "{player_icon} {title} - {artist} - {album}",
         "dynamic-order": ["title", "artist", "album", "position"],

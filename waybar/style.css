@@ -11,7 +11,6 @@
 window#waybar {
     background-color: rgba(0, 0, 0, 0);
     color: #ffffff;
-    /* Forces the bar itself to remain slim */
     min-height: 24px; 
 }
 
