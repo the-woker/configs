@@ -1,23 +1,24 @@
 window {
-    background-color: #191724; 
-    color: #e0def4; 
-}
-
-flowboxchild {
-    border-radius: 8px;
-    padding: 4px;
-}
-
-flowboxchild:selected {
-    background-color: #ebbcba; 
-}
-
-button, combobox {
-    background-color: #26233a;
-    border: 1px solid #403d52;
-    color: #e0def4;
+    background-color:  #353738;
 }
 
 button:hover {
-    background-color: #31748f;
+    background-image: none;
+    box-shadow: none;
+    border-color: transparent;
+}
+
+button:hover>image {
+    -gtk-icon-shadow: none;
+    -gtk-icon-effect: none;
+}
+
+.highlighted-button {
+    background-image: none;
+    box-shadow: none;
+    background-color: #353738;
+}
+
+.highlighted-button>image, .highlighted-button:hover>image {
+    -gtk-icon-effect: highlight;
 }
