@@ -94,10 +94,10 @@ return {
 			underline = { severity = vim.diagnostic.severity.ERROR },
 			signs = {
 				text = {
-					[vim.diagnostic.severity.ERROR] = "󰅚 ",
-					[vim.diagnostic.severity.WARN] = "󰀪 ",
-					[vim.diagnostic.severity.INFO] = "󰋽 ",
-					[vim.diagnostic.severity.HINT] = "󰌶 ",
+					[vim.diagnostic.severity.ERROR] = "   ",
+					[vim.diagnostic.severity.WARN] = "   ",
+					[vim.diagnostic.severity.INFO] = "   ",
+					[vim.diagnostic.severity.HINT] = "   ",
 				},
 			},
 			virtual_text = {
@@ -117,6 +117,11 @@ return {
 
 		local original_capabilities = vim.lsp.protocol.make_client_capabilities()
 		local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
+
+		vim.lsp.config("*", {
+			capabilities = capabilities,
+		})
+
 		local servers = {
 			lua_ls = {
 				settings = {
@@ -127,37 +132,35 @@ return {
 					},
 				},
 			},
+			clangd = {
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--clang-tidy",
+					"--query-driver=**",
+				},
+			},
 		}
 
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
+		for server_name, server_config in pairs(servers) do
+			vim.lsp.config(server_name, server_config)
+		end
+
+		local ensure_installed = {
+			"lua_ls",
 			"glsl_analyzer",
 			"neocmakelsp",
 			"stylua",
 			"cpptools",
-		})
+		}
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 		require("mason-lspconfig").setup({
 			ensure_installed = {},
 			automatic_installation = false,
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					require("lspconfig")[server_name].setup(server)
-				end,
-			},
+			automatic_enable = true,
 		})
 
-		require("lspconfig").clangd.setup({
-			capabilities = capabilities,
-			cmd = {
-				"clangd",
-				"--background-index",
-				"--clang-tidy",
-				"--query-driver=**",
-			},
-		})
+		vim.lsp.enable("clangd")
 	end,
 }
