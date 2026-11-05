@@ -9,3 +9,4 @@ no_actions=true
 halign=fill
 orientation=vertical
 insensitive=true
+term=ghostty

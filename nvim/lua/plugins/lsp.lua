@@ -118,8 +118,6 @@ return {
 		local original_capabilities = vim.lsp.protocol.make_client_capabilities()
 		local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
 		local servers = {
-			clangd = {},
-
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -135,13 +133,13 @@ return {
 		vim.list_extend(ensure_installed, {
 			"glsl_analyzer",
 			"neocmakelsp",
-			"stylua", -- Used to format Lua code
+			"stylua",
 			"cpptools",
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 		require("mason-lspconfig").setup({
-			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+			ensure_installed = {},
 			automatic_installation = false,
 			handlers = {
 				function(server_name)
@@ -149,6 +147,16 @@ return {
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 					require("lspconfig")[server_name].setup(server)
 				end,
+			},
+		})
+
+		require("lspconfig").clangd.setup({
+			capabilities = capabilities,
+			cmd = {
+				"clangd",
+				"--background-index",
+				"--clang-tidy",
+				"--query-driver=**",
 			},
 		})
 	end,
