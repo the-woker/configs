@@ -4,6 +4,7 @@ local options = {
 		nix = { "nixfmt" },
 		c = { "clang-format" },
 		cpp = { "clang-format" },
+		python = { "ruff_organize_imports", "ruff_format" },
 	},
 
 	formatters = {
