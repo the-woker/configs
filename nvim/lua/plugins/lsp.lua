@@ -145,6 +145,7 @@ return {
 			"neocmakelsp",
 			"stylua",
 			"cpptools",
+			"ruff",
 		}
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
