@@ -1,3 +1,4 @@
 [global]
 source = ["./theme.toml", "./bind.toml", "./layout.toml"]
-exec_once = ["pkill awww-daemon-wr;awww-daemon", "waypaper --restore", "pkill neko-mangowm;neko-mangowm HDMI-A-1"]
+exec = ["pkill neko-mangowm;neko-mangowm HDMI-A-1", "awww img ~/.config/wallp/fmab/al.png"]
+exec_once = ["awww-daemon", "mpris-proxy"]

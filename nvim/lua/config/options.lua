@@ -5,6 +5,13 @@ vim.o.relativenumber = true
 
 vim.o.undofile = true
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "text",
+	callback = function()
+		vim.opt_local.spell = true
+	end,
+})
+
 vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 

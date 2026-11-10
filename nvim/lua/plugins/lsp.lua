@@ -92,14 +92,7 @@ return {
 			severity_sort = true,
 			float = { border = "rounded", source = "if_many" },
 			underline = { severity = vim.diagnostic.severity.ERROR },
-			signs = {
-				text = {
-					[vim.diagnostic.severity.ERROR] = "󰅚 ",
-					[vim.diagnostic.severity.WARN] = "󰀪 ",
-					[vim.diagnostic.severity.INFO] = "󰋽 ",
-					[vim.diagnostic.severity.HINT] = "󰌶 ",
-				},
-			},
+			signs = false,
 			virtual_text = {
 				source = "if_many",
 				spacing = 2,
@@ -117,9 +110,12 @@ return {
 
 		local original_capabilities = vim.lsp.protocol.make_client_capabilities()
 		local capabilities = require("blink.cmp").get_lsp_capabilities(original_capabilities)
-		local servers = {
-			clangd = {},
 
+		vim.lsp.config("*", {
+			capabilities = capabilities,
+		})
+
+		local servers = {
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -129,27 +125,36 @@ return {
 					},
 				},
 			},
+			clangd = {
+				cmd = {
+					"clangd",
+					"--background-index",
+					"--clang-tidy",
+					"--query-driver=**",
+				},
+			},
 		}
 
-		local ensure_installed = vim.tbl_keys(servers or {})
-		vim.list_extend(ensure_installed, {
+		for server_name, server_config in pairs(servers) do
+			vim.lsp.config(server_name, server_config)
+		end
+
+		local ensure_installed = {
+			"lua_ls",
 			"glsl_analyzer",
 			"neocmakelsp",
-			"stylua", -- Used to format Lua code
+			"stylua",
 			"cpptools",
-		})
+			"ruff",
+		}
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 		require("mason-lspconfig").setup({
-			ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+			ensure_installed = {},
 			automatic_installation = false,
-			handlers = {
-				function(server_name)
-					local server = servers[server_name] or {}
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-					require("lspconfig")[server_name].setup(server)
-				end,
-			},
+			automatic_enable = true,
 		})
+
+		vim.lsp.enable("clangd")
 	end,
 }
