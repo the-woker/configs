@@ -63,10 +63,10 @@
 "none+XF86AudioNext" = "spawn,playerctl next"
 "none+XF86AudioPrev" = "spawn,playerctl previous"
 
-"ALT+h" = "movewin,-50+0"
-"ALT+j" = "movewin,+0,+50"
-"ALT+k" = "movewin,+0,-50"
-"ALT+l" = "movewin,+50,+0"
+# "ALT+h" = "movewin,-50+0"
+# "ALT+j" = "movewin,+0,+50"
+# "ALT+k" = "movewin,+0,-50"
+# "ALT+l" = "movewin,+50,+0"
 
 "CTRL+Alt+Up" = "resizewin,+0,-50"
 "CTRL+Alt+Down" = "resizewin,+0,+50"
