@@ -53,6 +53,9 @@
 "SUPER+SHIFT+8" = "tag,8,0"
 "SUPER+SHIFT+9" = "tag,9,0"
 
+"none+XF86AudioPrev" = "spawn,playerctl previous"
+"none+XF86AudioPlay" = "spawn,playerctl play-pause"
+"none+XF86AudioNext" = "spawn,playerctl next"
 "none+XF86MonBrightnessUp" = "spawn,brightnessctl s 5%+"
 "none+XF86MonBrightnessDown" = "spawn,brightnessctl s 5%-"
 "none+XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_SINK@ 2%+"
