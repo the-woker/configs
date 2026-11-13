@@ -77,9 +77,8 @@
 
     "memory": {
         "interval": 10,
-        "format": " {used}GiB",
-        "tooltip-format": "Total: {total}GiB\nAvailable: {avail}GiB\nSwap Used: {swapUsed}GiB",
-		"max-length": "8"
+        "format": " {used:.2f}GiB",
+        "tooltip-format": "Total: {total:.2f}GiB\nAvailable: {avail:.2f}GiB\nSwap Used: {swapUsed:.2f}GiB",
     },
 
     "custom/reload": {
