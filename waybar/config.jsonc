@@ -76,7 +76,7 @@
     },
 
     "memory": {
-        "interval": 10,
+        "interval": 5,
         "format": " {used:.2f}GiB",
         "tooltip-format": "Total: {total:.2f}GiB\nAvailable: {avail:.2f}GiB\nSwap Used: {swapUsed:.2f}GiB",
     },
