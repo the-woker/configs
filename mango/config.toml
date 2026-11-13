@@ -1,4 +1,4 @@
 [global]
 source = ["./theme.toml", "./bind.toml", "./layout.toml"]
-exec = ["pkill neko-mangowm;neko-mangowm eDP-1", "awww img ~/.config/wallp/fmab/al.png"]
+exec = ["pkill neko-mangowm;neko-mangowm eDP-1", "awww img ~/.config/wallp/dragonball/gokuvsfreeze.jpg"]
 exec_once = ["awww-daemon", "mpris-proxy"]
