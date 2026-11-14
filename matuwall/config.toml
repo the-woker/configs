@@ -1,0 +1,65 @@
+[general]
+directory = "~/.config/wallp"
+
+recursive = true
+
+backend = "awww"
+
+[backend.awww]
+args = []
+[window]
+preview = true
+
+close_on_focus_loss = false
+
+position = "center"
+
+background = "#11111b"
+
+margin = 34
+
+edge_margin = 24
+
+radius = 40
+
+[input]
+mouse = true
+
+[animation]
+navigation_ms = 410
+
+zoom_percent = 10
+
+[grid]
+columns = 5
+
+spacing = 16
+
+radius = 20
+
+border_width = 0
+
+shadow_width = 12
+
+ring_width = 0
+
+visible_rows = 5
+
+carousel = true
+
+edge = "auto"
+
+[thumbnail]
+width = 300
+height = 169
+
+[colors]
+tile = "#313244ff"
+
+border = "#585b70ff"
+
+shadow = "#00000066"
+
+ring = "#f2cdcdff"
+
+spinner = "#cdd0e6ff"
