@@ -25,10 +25,11 @@ window#waybar {
 }
 
 #tags button {
-  color: #666666;
+  color: #ffffff;
   background-color: #0a0a0a;
   border: 0px solid #242424;
   border-radius: 6px;
+  min-width: 0;
   padding: 0px 8px;
   margin-top: 1px;
   margin-bottom: 1px;
@@ -44,6 +45,10 @@ window#waybar {
   margin-bottom: 1px;
   margin-left: 4px;
   margin-right: 4px;
+}
+
+#tags button:not(.occupied):not(.focused) {
+  color: #666666;
 }
 
 #tags button:hover {
