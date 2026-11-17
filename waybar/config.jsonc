@@ -11,7 +11,7 @@
     "modules-left": [
         "mpris"
     ],
-    "modules-center": ["ext/workspaces"],
+    "modules-center": ["dwl/tags"],
     "modules-right": [
         "clock", 
         "wireplumber", 
@@ -22,15 +22,9 @@
         "custom/power"
     ],
 
-    "ext/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "all-outputs": false,
-        "ignore-hidden": false,
-        "format-icons": {
-            "active": "",
-            "default": ""
-        }
+    "dwl/tags": {
+        "num-tags": 9,
+        "tag-labels": ["", "", "", "", "", "", "", "", ""]
     },
 
     "battery": {
