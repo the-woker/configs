@@ -15,7 +15,6 @@
     "modules-right": [
         "clock", 
         "wireplumber", 
-        "battery",
         "cpu", 
         "memory",
         "custom/reload", 
@@ -27,17 +26,6 @@
         "tag-labels": ["", "", "", "", "", "", "", "", ""]
     },
 
-    "battery": {
-        "interval": 30,
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ϟ",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
-    },
 
     "mpris": {
         "format": "{player_icon} {title} - {artist} - {album}",
@@ -60,10 +48,11 @@
     },
 
     "wireplumber": {
-        "format": "{volume}%   ",
-        "format-muted": "  ",
+        "format": "{volume}% 󰕾",
+        "format-muted": "󰖁",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
+
 
     "cpu": {
         "format": " {usage}%"
