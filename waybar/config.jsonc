@@ -11,7 +11,7 @@
     "modules-left": [
         "mpris"
     ],
-    "modules-center": ["ext/workspaces"],
+    "modules-center": ["dwl/tags"],
     "modules-right": [
         "clock", 
         "wireplumber", 
@@ -22,22 +22,16 @@
         "custom/power"
     ],
 
-    "ext/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "all-outputs": false,
-        "ignore-hidden": false,
-        "format-icons": {
-            "active": "",
-            "default": ""
-        }
+    "dwl/tags": {
+        "num-tags": 9,
+        "tag-labels": ["", "", "", "", "", "", "", "", ""]
     },
 
     "battery": {
         "interval": 30,
         "states": {
             "warning": 30,
-        "critical": 15
+            "critical": 15
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ϟ",
@@ -62,12 +56,12 @@
 
     "clock": {
         "timezone": "America/Vancouver",
-        "format": "⏲ {:%H:%M}",
+        "format": "⏲ {:%H:%M}"
     },
 
     "wireplumber": {
-        "format": "{volume}% 󰕾",
-        "format-muted": "󰖁",
+        "format": "{volume}%   ",
+        "format-muted": "  ",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
 
@@ -78,7 +72,7 @@
     "memory": {
         "interval": 5,
         "format": " {used:.2f}GiB",
-        "tooltip-format": "Total: {total:.2f}GiB\nAvailable: {avail:.2f}GiB\nSwap Used: {swapUsed:.2f}GiB",
+        "tooltip-format": "Total: {total:.2f}GiB\nAvailable: {avail:.2f}GiB\nSwap Used: {swapUsed:.2f}GiB"
     },
 
     "custom/reload": {
