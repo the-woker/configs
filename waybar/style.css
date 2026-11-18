@@ -37,7 +37,7 @@ window#waybar {
 }
 
 #tags button.focused {
-  color: #ffffff;
+  color: #c5c6c7;
   background-color: #0a0a0a;
   border-radius: 2px;
   padding: 0px 8px;
