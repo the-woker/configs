@@ -36,8 +36,8 @@ window#waybar {
   margin-left: 4px;
 }
 
-#tags button.focused {
-  color: #c5c6c7;
+#tags button.occupied:not(.focused) {
+  color: #b0b0b0;
   background-color: #0a0a0a;
   border-radius: 2px;
   padding: 0px 8px;
